@@ -5,43 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahlprogramm der FDP</title>
     <style>
-        /* --- Grundlegende Einstellungen --- */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             background-color: white;
-            color: #333;
-            line-height: 1.6;
-            padding: 0;
-        }
-
-        /* --- Abgerundete Ecken, Schatten und Animationen --- */
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        section {
-            padding: 60px 20px;
-            margin: 30px 0;
-            border-radius: 15px;
-            background-color: #f7f7f7;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transform: translateY(0);
-            opacity: 0;
-            animation: fadeInUp 0.8s forwards;
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            color: black;
         }
 
         /* --- Hero Section --- */
@@ -49,13 +17,11 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 100px 0;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
+            padding: 100px 20px;
         }
 
         .hero h1 {
-            font-size: 60px;
+            font-size: 50px;
             font-weight: bold;
             color: #FF00FF; /* Pink */
             animation: fadeIn 2s ease-in-out;
@@ -74,7 +40,6 @@
             font-size: 20px;
             cursor: pointer;
             transition: 0.3s;
-            border-radius: 10px;
             margin-top: 20px;
         }
 
@@ -83,15 +48,17 @@
             color: yellow;
         }
 
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
         /* --- Navigation --- */
         nav {
             background-color: black;
             color: white;
             padding: 15px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         nav a {
@@ -105,20 +72,21 @@
             color: yellow;
         }
 
-        /* --- Text und Abschnittsformatierungen --- */
-        section h2 {
-            font-size: 40px;
-            color: #FF00FF; /* Pink */
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        /* --- Sections --- */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        section p {
-            font-size: 18px;
-            color: #333;
+        .section h2 {
+            color: #FF00FF; /* Pink */
+            font-size: 36px;
             margin-bottom: 20px;
-            text-align: justify;
-            line-height: 1.6;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 30px;
         }
 
         /* --- Footer --- */
@@ -127,9 +95,6 @@
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
         }
 
         footer a {
@@ -141,30 +106,50 @@
             color: yellow;
         }
 
-        footer p {
-            font-size: 14px;
-            color: gray;
+        /* --- Button Styling --- */
+        .button {
+            background-color: yellow;
+            color: black;
+            padding: 12px 25px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: pink;
+            color: yellow;
         }
 
         /* --- Responsivität --- */
         @media (max-width: 768px) {
-            .cta-button {
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
                 font-size: 18px;
-                padding: 10px 20px;
+            }
+
+            nav {
+                padding: 10px;
             }
 
             nav a {
                 font-size: 16px;
+                margin: 0 10px;
             }
 
-            .hero h1 {
-                font-size: 40px;
+            .section h2 {
+                font-size: 28px;
             }
 
-            section h2 {
-                font-size: 30px;
+            .section p {
+                font-size: 16px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -185,54 +170,54 @@
     <section id="hero" class="hero">
         <h1>Freiheit. Ordnung. Fortschritt.</h1>
         <p>Das Wahlprogramm der Freien Demokraten für eine freie Zukunft.</p>
-        <button class="cta-button">Mehr erfahren</button>
+        <a href="#wirtschaft"><button class="cta-button">Zum Wahlprogramm</button></a>
     </section>
 
     <!-- Wirtschaft Section -->
-    <section id="wirtschaft">
+    <section id="wirtschaft" class="section">
         <h2>Wirtschaft</h2>
-        <p>Wir möchten den Staat weitestgehend aus den Angelegenheiten des Volkes entfernen. Der Handel soll frei stattfinden können, ohne ständige Einmischung des Staates. Wir stehen für deine Freiheit, dein Kapital und deinen Gewinn!</p>
+        <p>Wir möchten den Staat weitestgehend aus den Angelegenheiten des Volkes entfernen. Der Handel soll frei stattfinden, ohne ständige Einmischung des Staates. Wir stehen für deine Freiheit, dein Kapital und deinen Gewinn!</p>
         <p>Wir wollen eine Einkommensteuer, Kapitalertragssteuer und Exportsteuer erheben. Diese Steuern sollen jedoch in geringen Mengen erhoben werden, um den Markt nicht zu stören und Inflation zu vermeiden.</p>
         <p>Wir fördern deinen Erfolg. Dein Startup oder dein Unternehmen wird von uns unterstützt, damit du Märkte erschließen kannst und dein Geschäft wächst.</p>
     </section>
 
     <!-- Bildung Section -->
-    <section id="bildung">
+    <section id="bildung" class="section">
         <h2>Bildung</h2>
         <p>Wir möchten klar aufzeigen, welche Konsequenzen radikales Handeln haben kann und wie wichtig es ist, unsere demokratische und freie Ordnung zu schützen. Wir wollen eine Gesellschaft, die sich gegen radikale Parteien stellt und eine stabile, offene Demokratie bewahrt.</p>
         <p>Wir schaffen ein System, in dem jeder sich über Tests und Inhalte für volksvertretende Ämter qualifizieren kann. So haben wir eine Partei, die wirklich unsere Interessen vertritt.</p>
     </section>
 
     <!-- Innenpolitik Section -->
-    <section id="innenpolitik">
+    <section id="innenpolitik" class="section">
         <h2>Innenpolitik</h2>
         <p>Die größte Freiheitseinschränkung ist jene, die uns in unserer Bewegungsfreiheit, Meinungsfreiheit und Existenzfreiheit einschränkt. Deshalb setzen wir uns für strenge Gesetzesverstöße ein. Wir wollen ein sicheres und freies Leben für alle Bürger!</p>
         <p>Wir möchten ein Militärpolizei-Modell einführen, das Staatskosten minimiert und Unternehmern ermöglicht, Arbeitskräfte zu beschäftigen. Zudem wird der Schutz von Eigentum gestärkt, um private Rechte zu wahren.</p>
     </section>
 
     <!-- Außenpolitik Section -->
-    <section id="außenpolitik">
+    <section id="außenpolitik" class="section">
         <h2>Außenpolitik</h2>
         <p>Wir sind gegen militärische Bündnisse mit Staaten, die nicht in Europa liegen oder nicht westliche kulturelle Eigenschaften haben. Bei wirtschaftlichen Bündnissen sind wir jedoch offen und streben nach einer Vereinfachung des Handels.</p>
         <p>Wir wollen Kriege verhindern. Wir starten keine Angriffskriege, helfen aber unseren Verbündeten, wenn es langfristig sinnvoll ist.</p>
     </section>
 
     <!-- Ordnung Section -->
-    <section id="ordnung">
+    <section id="ordnung" class="section">
         <h2>Ordnung</h2>
         <p>Ein starker Staat braucht Ordnung. Wir setzen auf eine starke Gesetzgebung, die dir und deinem Eigentum den Schutz garantiert, den du verdienst. Jeder Bürger soll die Freiheit haben, zu leben und zu arbeiten, ohne Gefahr von äußeren Bedrohungen.</p>
         <p>Wir sind gegen die Wehrpflicht und glauben, dass jeder selbst entscheiden sollte, wie er zur Verteidigung unseres Landes beiträgt. Jeder soll Verantwortung übernehmen können.</p>
     </section>
 
     <!-- Umsetzung Section -->
-    <section id="umsetzung">
+    <section id="umsetzung" class="section">
         <h2>Umsetzung</h2>
         <p>Wir finanzieren all dies durch unsere Handlungen. Unser Wahlprogramm stärkt die Wirtschaft enorm – und das ist belegbar! Da wir nicht unnötig in die Wehrpflicht investieren, sondern in dich und deine Freiheit, entstehen uns keine hohen Kosten. Das ermöglicht es uns, Ressourcen effizient einzusetzen und den Markt zu fördern.</p>
         <p>Für die rechtlichen Änderungen brauchen wir deine Stimme. Denke nicht zu lange an andere Parteien, sondern überlege wirklich, was für dich und deine Zukunft wichtig ist. Deine Stimme für uns bedeutet Fortschritt und eine echte Veränderung – für dich und für unser Land!</p>
     </section>
 
     <!-- Kontakt Section -->
-    <section id="kontakt">
+    <section id="kontakt" class="section">
         <h2>Kontakt</h2>
         <p>Du möchtest mehr erfahren oder hast Fragen? Trete unserem Discord-Server bei, um mehr über unser Programm zu erfahren und mit uns direkt zu sprechen!</p>
         <p>Hier findest du weitere Infos und kannst dich mit anderen Gleichgesinnten austauschen: <a href="https://discord.gg/tWBgNJXDqA" target="_blank">Unser Discord-Server</a></p>
